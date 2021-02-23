@@ -3,8 +3,8 @@ import AppRouter from './config/AppRouter'
 
 function App() {
   return (
-    <div className="App">
-        <AppRouter />
+    <div style={{ backgroundColor: "#FAFBFC" }} className="App">
+      <AppRouter />
     </div>
   );
 }

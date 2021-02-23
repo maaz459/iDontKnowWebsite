@@ -6,3 +6,6 @@
   font-size: 25px;
   font-weight: bold;
 }
+.CardTopBanner{
+  box-shadow: 0px 0px 8px 0px rgba(171,171,171,0.5);
+}

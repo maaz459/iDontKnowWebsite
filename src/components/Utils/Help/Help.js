@@ -9,15 +9,18 @@ import img2 from "./../../../Assets/icons/Icon feather-message-square.png";
 const Help = () => {
   return (
     <>
-      <p id="help-head">We're here to help</p>
+      <p style={{
+        fontFamily: "AvenirTextBlack",
+        fontWeight: "bolder"
+      }} id="help-head">We're here to help</p>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
         }}
       >
-        <Row gutter={12}>
-          <Col xs={20} sm={20} md={10} lg={12} xl={12}>
+        <Row justify="center">
+          <Col xs={20} sm={20} md={12} lg={12} xl={12}>
             <ContactCard
               title="Call Now"
               extra={<img src={img1} />}
@@ -34,7 +37,7 @@ const Help = () => {
               time="10AM - 5PM CST"
             />
           </Col>
-          <Col xs={20} sm={20} md={10} lg={12} xl={12}>
+          <Col xs={20} sm={20} md={12} lg={12} xl={12}>
             <MessageCard
               title="Send Message"
               extra={<img src={img2} />}

@@ -13,8 +13,9 @@ const Cards = ({
   five,
   six,
   btnText,
-  color,
-  bgColor,
+  btnColor,
+  btnFontColor,
+  style,
 }) => {
   return (
     <div >
@@ -23,10 +24,7 @@ const Cards = ({
         title={title}
         extra={extra}
         bordered={true}
-        style={{
-          borderRadius: "20px",
-
-        }}
+        style={style}
       >
         <p>{one}</p>
         <Divider style={{ border: "1px solid grey" }} />
@@ -41,15 +39,14 @@ const Cards = ({
         <p>{six}</p>
         <br />
 
-        <Button
-          style={{
-            width: "100%",
-            color: { color },
-            backgroundColor: { bgColor },
-          }}
-        >
-          {btnText}
-        </Button>
+        <div >
+          <Button
+            style={{ width: "100%", backgroundColor: btnColor, color: btnFontColor, fontFamily: "AvenirTextBlack" }}
+          >
+            {btnText}
+          </Button>
+        </div>
+
       </Card>
     </div>
   );

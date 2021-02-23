@@ -2,7 +2,6 @@ import React from 'react';
 import './HomePage.css'
 import { Row, Col, Dropdown, Button, Menu } from 'antd'
 import { DownOutlined, UserOutlined } from '@ant-design/icons';
-
 import LoginWithGoogle from './../../components/LoginWithGoogle';
 import LoginWithLinkedin from './../../components/LoginWithLinkedin';
 import Path50309 from './../../Assets/images/Path50309.png'
@@ -17,35 +16,11 @@ import PricingBanner from './../../components/Pricing/PricingBanner/PricingBanne
 import FAQ from './../../components/Utils/FAQ/FAQ';
 import QuestionIcon from '../../components/Questions/QuestionIcon/QuestionIcon';
 import PricingJoinNow from './../../components/Pricing/PricingJoinNow/PricingJoinNow';
-const menu = (
-    <Menu >
-        <Menu.Item key="1" icon={<UserOutlined />}>
-            1st menu item
-      </Menu.Item>
-        <Menu.Item key="2" icon={<UserOutlined />}>
-            2nd menu item
-      </Menu.Item>
-        <Menu.Item key="3" icon={<UserOutlined />}>
-            3rd menu item
-      </Menu.Item>
-    </Menu >
-);
-const HomePage = () => {
-    const { width } = useWindowDimensions()
-    function handleButtonClick(e) {
-        console.log('click left button', e);
-    }
 
-    function handleMenuClick(e) {
-        console.log('click', e);
-    }
+const HomePage = () => {
 
     return (<div>
         <Navbar></Navbar>
-        <div style={{ height: "80px" }}>
-
-        </div >
-
         {/* Title Headings Section */}
         <div class="title">
             <Row justify="center">
@@ -60,7 +35,7 @@ const HomePage = () => {
                     <h1 className="m-0 p-0 mainHeading">Resume Maker</h1>
                     <h2 className="m-0 p-0 secondMainHeading" >For Profession Lover</h2>
                     <p className="TitlePara">Professionally designed and employer approved, our CV templates have helped people get hired at the world’s best companies. 20+ customizable template options</p>
-                    <Row justify="space-around">
+                    <Row justify="start">
 
                         <Col className="py-2" lg={11} md={20} sm={20} xs={20}>
                             <LoginWithGoogle
@@ -72,18 +47,9 @@ const HomePage = () => {
                                 name="Sign up with Google"></LoginWithGoogle>
 
                         </Col>
-                        <Col className="py-2" lg={11} md={20} sm={20} xs={20}>
+                        <Col className="py-2 buttonSpacing" lg={11} md={20} sm={20} xs={20}>
                             <LoginWithLinkedin
-                                // style={{
-                                //     fontSize: "12px",
-                                //     width: "100%",
-                                //     paddingTop: "8px",
-                                //     paddingBottom: "8px",
-                                //     borderRadius: "4px",
-
-                                // }}
                                 className="LoginButtons"
-
                                 name="Sign up with LinkedIn"></LoginWithLinkedin>
 
                         </Col>
@@ -116,10 +82,10 @@ const HomePage = () => {
 </p>
 
                     </Col>
-                    <Col span={8}>
+                    <Col md={8} sm={20} xs={20} >
                         <div className="dropDown">
-                            <p className="my-0" style={{ width: "90%", fontSize: "12px", padding: "2% 0%" }}>All CV Templates</p>
-                            <div style={{ fontSize: "12px", color: "#FF4309" }}> <DownOutlined /></div>
+                            <p className="mt-2" style={{ width: "90%", fontSize: "12px" }}>All CV Templates</p>
+                            <DownOutlined className="mt-2" style={{ fontSize: "12px", color: "#FF4309" }} />
                         </div>
 
                     </Col>
@@ -152,7 +118,7 @@ const HomePage = () => {
                 </Col>
                 <Col className="my-4" offset={2} lg={7} md={7} sm={20}>
                     <h2 className="CreateCVTextHeading">More than 15 customizable Templates</h2>
-                    <ul className="pl-3">
+                    <ul style={{ color: "#FFFFFF" }} className="pl-3">
                         <li className="listItems">Choose from more than 15 adaptable templates</li>
                         <li className="listItems">Access from any device at any time</li>
                         <li className="listItems">Allow your CV to appear in Google searches</li>
@@ -187,11 +153,12 @@ stars, I would give more than 1000!"/>
                 })}
 
             </Row>
-            <Row justify="center">
+            <Row style={{ marginTop: "10%" }} justify="center">
                 <Col span={15} >
                     <form >
-                        <input type="text" class="feedbackBar" placeholder="Add Your FeedBack" />
-                        <button class="btn">Add</button>
+                        <div style={{ display: "flex", justifyContent: "center" }}>
+                            <input type="text" class="feedbackBar" placeholder="Add Your FeedBack" />
+                            <button class="btn">Add</button></div>
                     </form>
                 </Col>
             </Row>
@@ -217,6 +184,7 @@ stars, I would give more than 1000!"/>
                 secondBtn="#FFFFFF"
                 fontColor="#FFFFFF"
                 cardColor="#0A2C66"
+                checkPage="home"
             />
         </div>
 

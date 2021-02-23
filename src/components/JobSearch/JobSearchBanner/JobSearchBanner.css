@@ -1,0 +1,24 @@
+#search-img {
+  /* background-image: url("../../../Assets/images/Group 17246.png"); */
+  background-color: skyblue;
+  padding-top: "20%";
+  padding-bottom: "20%";
+  /* width: 100%; */
+}
+
+#jobSearch {
+  width: 350px;
+  height: 50px;
+  border: none;
+}
+#job {
+  height: 48px;
+  border: none;
+}
+#jobBtn {
+  height: 50px;
+  width: 130px;
+  border: none;
+  background-color: #0a2c66;
+  color: white;
+}

@@ -2,28 +2,32 @@ import React from "react";
 import Cards from "./Card";
 import { Row, Col } from "antd";
 import "antd/dist/antd.css";
-
+import './Card.css'
 const PricingCard = () => {
   return (
     <>
       <p
         style={{
           textAlign: "center",
-          fontWeight: "bold",
-          fontSize: "35px",
-          marginTop: "5%",
+          fontSize: "30px",
+          fontFamily: "RobotoBold"
         }}
       >
         What You Get With Career CV
       </p>
       <div>
-        <Row justify="center">
-          <Col xs={20} sm={20} md={10} lg={12} xl={12}>
+        <Row justify="space-around">
+          <Col className="my-4" xs={20} sm={20} md={9} lg={9} xl={9}>
             <Cards
               title="Free"
               extra="$0"
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0px 0px 8px 0px rgba(171,171,171,0.5)"
+              }}
               one={
                 <p>
+
                   <b>3 professionally Designed Templates</b>
                   <br />
                   Basic options to get you started
@@ -63,17 +67,21 @@ const PricingCard = () => {
                   Track views and downloads on your CV
                 </p>
               }
-              btnText={
-                <p style={{ color: "#0a2c66", backgroundColor: "#e6e6e6" }}>
-                  Sign up Free
-                </p>
-              }
+              btnText="Sign up Free"
+              btnColor="#ECECEC"
+              btnFontColor="#0A2C66"
             />
           </Col>
-          <Col xs={20} sm={20} md={10} lg={12} xl={12}>
+          <Col className="my-4" xs={20} sm={20} md={9} lg={9} xl={9}>
             <Cards
               title="Pro"
               extra="$12/m"
+              style={{
+                borderRadius: "20px",
+                boxShadow: "0px 0px 8px 0px rgba(171,171,171,0.5)",
+                background: "rgba(196,221,255,.2)"
+
+              }}
               one={
                 <p>
                   <b>20+ Professionally Designed Templates</b>
@@ -115,15 +123,14 @@ const PricingCard = () => {
                   Track views and downloads on your CV
                 </p>
               }
-              btnText={
-                <p style={{ color: "#e6e6e6", backgroundColor: "#0a2c66" }}>
-                  Get Pro Now
-                </p>
-              }
+              btnText="Get Pro Now"
+              btnColor="#6984AE"
+              btnFontColor="#FFFFFF"
             />
           </Col>
         </Row>
       </div>
+
     </>
   );
 };

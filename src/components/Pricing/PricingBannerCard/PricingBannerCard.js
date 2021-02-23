@@ -9,7 +9,7 @@ const PricingBannerCard = (props) => {
     <>
 
       <Row justify="center">
-        <Col className="mx-4 my-2" xs={14} sm={14} md={12} lg={7} xl={7}>
+        <Col className="mx-4 my-2" xs={18} sm={18} md={12} lg={7} xl={7}>
           <BannerCard
             one={
               <p
@@ -86,14 +86,15 @@ const PricingBannerCard = (props) => {
             }
             btnText="Sign up Free"
             firstBtn={props.firstBtn}
+            checkPage={props.checkPage}
 
           />
         </Col>
 
-        <Col className="mx-4 my-2" xs={14} sm={14} md={12} lg={7} xl={7}>
+        <Col className="mx-4 my-2" xs={18} sm={18} md={12} lg={7} xl={7}>
           <BannerCard
             start={
-              <CardTabs></CardTabs>
+              <CardTabs checkPage={props.checkPage}></CardTabs>
             }
             cardColor={props.cardColor}
             one={

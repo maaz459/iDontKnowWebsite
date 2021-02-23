@@ -1,5 +1,4 @@
 .mainBorder{
-    background-image: url('./Rectangle\ 2992.png');
     border-radius: 10px;
     width: 70%;
     height: 40px;
@@ -7,6 +6,12 @@
     padding: 0px 5px;
     justify-content:space-between;
     padding-top: 7px;
+}
+.home{
+    background-image: url('./Rectangle2992.png');
+}
+.pricing{
+    background-image: url('./Rectangle2992@2x.png');
 }
 .firstCategory{
     color: white!important;

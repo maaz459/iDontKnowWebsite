@@ -14,12 +14,14 @@ const BannerCard = ({
   color,
   firstBtn,
   btnText,
-  cardColor
+  cardColor,
+  checkPage
 }) => {
   return (
     <div >
       <Card
         hoverable
+        checkPage={checkPage}
         bordered={true}
         style={{
           borderRadius: "20px",

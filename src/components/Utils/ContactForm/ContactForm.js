@@ -1,6 +1,11 @@
+
+import "./ContactForm.css"
 import React from "react";
+import { Form, Input } from "antd";
 
 const ContactForm = () => {
+  const [form] = Form.useForm();
+
   return (
     <div
       style={{
@@ -10,62 +15,53 @@ const ContactForm = () => {
       }}
     >
       <h1 className="text-center pt-5">Contact Form</h1>
-      <div class="row g-3 align-items-center pt-5 justify-content-center">
-        <div class="col-auto">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Email Address"
-            style={{ width: "300px" }}
+      <Form
+        form={form}
+        name="horizontal_login"
+        layout="inline"
+        className="mt-5"
+      >
+        <Form.Item name="email">
+          <Input placeholder="Email Address" size="large" className="px-5" />
+        </Form.Item>
+        <Form.Item name="name">
+          <Input className="px-5" placeholder="Name" size="large" />
+        </Form.Item>
+      </Form>
+      <Form form={form} className="mt-3">
+        <Form.Item name="subject">
+          <Input
+            className="px-5"
+            placeholder="Enter Subject Here"
+            size="large"
           />
-        </div>
-        <div class="col-auto">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Name"
-            style={{ width: "300px" }}
-          />
-        </div>
-      </div>
-      <div class="row g-3 align-items-center mt-2 justify-content-center">
-        <div class="col-auto">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter Subject here"
-            style={{ width: "617px" }}
-          />
-        </div>
-      </div>
-      <div class="row g-3 align-items-center mt-2 justify-content-center">
-        <div class="col-auto">
-          <textarea
-            type="text"
-            class="form-control"
+        </Form.Item>
+        <Form.Item name="help">
+          <Input
+            className="px-5"
             placeholder="Let us know how we can help you!"
-            style={{ width: "617px", height: "100px" }}
+            size="large"
+            style={{ height: "120px" }}
           />
-        </div>
-      </div>
-      <div class="row g-3 align-items-center mt-2 justify-content-center">
-        <div class="col-auto">
-          <button
-            type="button"
-            style={{
-              backgroundColor: "#0a2c66",
-              color: "white",
-              width: "150px",
-              height: "40px",
-              borderRadius: "5px",
-              justifyContent: "center",
-            }}
-          >
-            Send Message
-          </button>
-        </div>
+        </Form.Item>
+      </Form>
+      <div className="text-center">
+        <button
+          type="button"
+          style={{
+            backgroundColor: "#0a2c66",
+            color: "white",
+            width: "170px",
+            height: "35px",
+            fontSize: "12px",
+            borderRadius: "2px",
+          }}
+        >
+          Send Message
+        </button>
       </div>
     </div>
   );
 };
+
 export default ContactForm;

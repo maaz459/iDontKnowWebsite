@@ -15,6 +15,11 @@ body {
   src: local('RobotoHeading'), url(./Assets/Fonts/Roboto/Roboto-Regular.ttf) format('truetype');
 }
 @font-face {
+  font-family: 'RobotoBold';
+  src: local('RobotoBold'), url(./Assets/Fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'RobotoHeadingMedium';
   src: local('RobotoHeadingMedium'), url(./Assets/Fonts/Roboto/Roboto-Medium.ttf) format('truetype');
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import { Row, Col } from "antd";
+import './../../../Screens/PricingScreen/PricingScreen.css'
 import PricingBannerCard from "../PricingBannerCard/PricingBannerCard";
 
-const PricingBanner = ({ divStyle, paraStyle, secondParaStyle, firstBtn, secondBtn, fontColor, cardColor }) => {
+const PricingBanner = ({ divStyle, divClassName, paraStyle, secondParaStyle, firstBtn, secondBtn, fontColor, cardColor, checkPage }) => {
   return (
     <div
       style={divStyle}
+      className={divClassName ? "title" : ""}
     >
       <Row>
         <Col span={24}>
@@ -30,7 +32,7 @@ const PricingBanner = ({ divStyle, paraStyle, secondParaStyle, firstBtn, secondB
       </Row>
       <Row>
         <Col span={24} style={{ marginTop: 50 }}>
-          <PricingBannerCard firstBtn={firstBtn} secondBtn={secondBtn} fontColor={fontColor} cardColor={cardColor} />
+          <PricingBannerCard firstBtn={firstBtn} secondBtn={secondBtn} fontColor={fontColor} cardColor={cardColor} checkPage={checkPage} />
         </Col>
       </Row>
     </div>

@@ -10,6 +10,8 @@ const PlanDetailPackageCard = ({ title, extra, name, price, bill }) => {
       style={{
         borderRadius: "2px",
         marginTop: "2%",
+        height: "130px",
+        padding: "0px"
       }}
     >
       <div>{title}</div>

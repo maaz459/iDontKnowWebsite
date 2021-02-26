@@ -3,7 +3,7 @@ import { Row, Col } from "antd";
 import icon from "../../../Assets/icons/Icon feather-message-square.png";
 import JobDescription from "../JobDescription/JobDescription";
 
-const JobDescriptionCard = () => {
+const JobDescriptionCard = (props) => {
   return (
     <JobDescription
       desgination={

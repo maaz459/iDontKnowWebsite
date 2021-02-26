@@ -14,7 +14,7 @@ const PlanDetailPackage = () => {
         <Col sm={24} lg={7}>
           <PlanDetailPackageCard
             name={
-              <h6 className="text-center">
+              <h6 className="text-center" style={{ margin: "0px", padding: "0px", fontSize: "13px" }}>
                 <strong>Pro Quartely</strong>
               </h6>
             }
@@ -25,6 +25,7 @@ const PlanDetailPackage = () => {
                     fontSize: "45px",
                     fontWeight: "bold",
                     textAlign: "center",
+                    margin: "0px", padding: "0px"
                   }}
                 >
                   $12
@@ -36,7 +37,7 @@ const PlanDetailPackage = () => {
             }
             bill={
               <p
-                style={{ color: "grey", fontSize: "12px", textAlign: "center" }}
+                style={{ color: "grey", fontSize: "12px", textAlign: "center", margin: "0px", padding: "0px" }}
               >
                 <strong>Billed Quartely</strong>
               </p>

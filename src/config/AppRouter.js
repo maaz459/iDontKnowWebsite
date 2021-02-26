@@ -17,8 +17,8 @@ import BasicInfo from './../Screens/CVMaking/BasicInfo/BasicInfo'
 import Work from './../Screens/CVMaking/Work/Work';
 import Education from './../Screens/CVMaking/Education/Education';
 import Skills from './../Screens/CVMaking/Skills/Skills'
-import JobSearchScreen from './../Screens/JobSearchScreen/JobSearchScreen';
 import PayPalScreen from '../Screens/PayPalScreen/PaypalScreen';
+import JobSearchScreen from './../Screens/JobSearchScreen/JobSearchScreen';
 export default class Routers extends Component {
     render() {
         return (

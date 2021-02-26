@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Row, Col, Button, Card } from "antd";
 
 const JobApply = ({

@@ -6,7 +6,8 @@ const { Sider } = Layout;
 
 const SideBar = () => {
   return (
-    <Sider width={250} style={{ backgroundColor: "white", marginLeft: "4%" }}>
+
+    <>
       <p style={{ paddingTop: "5%", marginBottom: "-5%" }}>
         <strong>Filters</strong>
       </p>
@@ -48,8 +49,7 @@ const SideBar = () => {
         <CheckBox name="Islamabad" number="145" />
         <CheckBox name="Layyah" number="1243" />
         <CheckBox name="Murree" number="432" />
-      </div>
-    </Sider>
+      </div></>
   );
 };
 

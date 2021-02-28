@@ -1,7 +1,40 @@
 .headingsColumn{
     padding-top: 10%;
 }
+.img-dv {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+  }
+  .img-dv:hover .view-template  {
+    opacity: 1;
+    
 
+  }
+  .img-dv:hover{
+      filter: grayscale(5);
+      
+  }
+.LinkHover:hover{
+text-decoration: none;
+}
+  .view-template {
+     opacity: 0;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    color: #0a2c66;
+    background-color: #ffffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-style:AvenirText;
+    z-index: 100;
+    box-shadow: 0 5px 15px rgba(145, 92, 182, .4);
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
 .LoginButtons{
     font-size: 10px;
     padding-top: 8px;

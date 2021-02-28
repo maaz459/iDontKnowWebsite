@@ -1,39 +1,24 @@
 import React, { useState } from "react";
 import { Card, Row, Col } from "antd";
-
+import './JobDescription.css'
 const JobDescription = ({
   desgination,
   description,
   date,
   duration,
   salary,
-  //openCard,
+  color
 }) => {
-  // const [color, setColor] = useState("white");
-
-  // const changeColor = () => {
-  //   setColor("#e6e6e6");
-  //   openCard(true);
-  // };
-
-  // console.log("ajj wekay ga groverr", openCard);
-
   return (
     <>
-      {/* <Card hoverable style={{ backgroundColor: color }} onClick={changeColor}></Card> */}
-      <Card hoverable>
-        <Row>
-          <Col>{desgination}</Col>
-        </Row>
-        <Row>
-          <Col> {description}</Col>
-        </Row>
+      <Card style={{ backgroundColor: color }} hoverable>
+
+        {desgination}
+        {description}
         <Row>
           <Col>{date}</Col>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <Col>{duration}</Col>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <Col>{salary}</Col>
+          <Col style={{ marginLeft: "10px" }}>{duration}</Col>
+          <Col style={{ marginLeft: "10px" }}>{salary}</Col>
         </Row>
       </Card>
     </>

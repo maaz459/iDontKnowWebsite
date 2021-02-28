@@ -1,51 +1,56 @@
 import React from "react";
 import { Row, Col } from "antd";
 import JobApply from "../JobApply/JobApply";
-import icon from "../../../Assets/icons/Icon feather-message-square.png";
-
+import icon from "../../../Assets/icons/grab-logo.png";
+import remainder from "../../../Assets/icons/remainder.png";
+import notes from "../../../Assets/icons/notes.png";
+import dollar from "../../../Assets/icons/dollar.png";
 const JobApplyCard = () => {
   return (
     <JobApply
       desgination={
         <Row>
           <Col className="pt-2">
-            <img src={icon} />
+            <img src={icon} width={75} />
           </Col>
           &nbsp;&nbsp;
           <Col>
             <p>
-              <strong>Graphic Designer</strong>
+              <strong style={{ fontFamily: "RobotoHeading", fontSize: "13px" }}>Graphic Designer</strong>
               <br />
-              <span style={{ color: "#e6e6e6" }}>Layyah, Sahiwal Pakistan</span>
+              <span style={{ color: "#C5C5C5", fontFamily: "RobotoHeading", marginBottom: "0px" }}>Layyah, Sahiwal Pakistan</span>
             </p>
           </Col>
         </Row>
       }
       date={
-        <Row>
-          <Col style={{ color: "#e6e6e6" }}>
-            <i class="fas fa-calendar-alt"> &nbsp;&nbsp;&nbsp; 01-04-2021</i>
+        <Row style={{ marginTop: "10px" }} >
+          <Col >
+            <img src={remainder} />
+            <span style={{ fontFamily: "AvenirTextBlack", opacity: "0.5", marginTop: "1px" }}>&nbsp; 01-04-2021</span>
           </Col>
         </Row>
       }
       duration={
-        <Row>
-          <Col style={{ color: "#e6e6e6" }}>
-            <i class="fas fa-calendar-alt"> &nbsp;&nbsp;&nbsp; 4 Years</i>
+        <Row style={{ marginTop: "10px" }}>
+          <Col>
+            <img style={{ backgroundColor: "#333333", opacity: "0.5" }} src={notes} />
+            <span style={{ fontFamily: "AvenirTextBlack", opacity: "0.5", marginTop: "1px" }}>&nbsp; 04 Years</span>
           </Col>
         </Row>
       }
       salary={
-        <Row>
-          <Col style={{ color: "#e6e6e6" }}>
-            <i class="fas fa-usd-square"> &nbsp;&nbsp;&nbsp; 40000 - 50000</i>
+        <Row style={{ marginTop: "10px" }}>
+          <Col>
+            <img src={dollar} />
+            <span style={{ fontFamily: "AvenirTextBlack", opacity: "0.5", marginTop: "1px" }}>&nbsp; 45000-50000</span>
           </Col>
         </Row>
       }
       applyBtn={"Apply"}
       saveBtn={"Save Job"}
       description={
-        <p style={{ textAlign: "justify", marginTop: "2%" }}>
+        <p style={{ textAlign: "justify", marginTop: "2%", fontFamily: "AvenirTextBlack", fontSize: "0.9em" }}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and

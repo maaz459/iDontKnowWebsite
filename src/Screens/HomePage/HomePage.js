@@ -1,12 +1,11 @@
 import React from 'react';
 import './HomePage.css'
-import { Row, Col, Dropdown, Button, Menu } from 'antd'
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
+import { Row, Col } from 'antd'
+import { useHistory } from 'react-router-dom'
+import { DownOutlined } from '@ant-design/icons';
 import LoginWithGoogle from './../../components/LoginWithGoogle';
 import LoginWithLinkedin from './../../components/LoginWithLinkedin';
-import Path50309 from './../../Assets/images/Path50309.png'
 import GroupPhotos from './../../Assets/images/Group11016.png'
-import useWindowDimensions from './../../components/windowDimensions';
 import data from './cvsData';
 import GlowButton from './../../components/Utils/GlowButton';
 import Navbar from './../../components/Navbar/Navbar';
@@ -18,6 +17,10 @@ import QuestionIcon from '../../components/Questions/QuestionIcon/QuestionIcon';
 import PricingJoinNow from './../../components/Pricing/PricingJoinNow/PricingJoinNow';
 
 const HomePage = () => {
+    let history = useHistory()
+    const viewCvBtn = (image, name, description) => {
+        history.push('/viewCV', { image: image, name: name, description: description })
+    }
 
     return (<div>
         <Navbar></Navbar>
@@ -92,15 +95,23 @@ const HomePage = () => {
                 </Row>
             </div>
             <div>
-                <Row >
+                <Row>
                     {data.map((d, index) => {
-                        return <Col className="mx-auto my-5" lg={5} md={7} sm={11} xs={11}>
-                            <img style={{ maxWidth: "100%" }} src={d.image} alt="" />
-                            <h4 className="cvTitle">{d.name}</h4>
-                            <p className="cvText">{d.description}</p>
-                        </Col>
+                        return (
+                            <Col key={index} className="mx-auto my-5" lg={5} md={7} sm={11} xs={11}>
+                                <div className="img-dv">
+                                    <img className="imageHover" style={{ maxWidth: "100%" }} src={d.image} alt="" />
+                                    <div className="view-templateDiv" >
+                                    </div>
+                                    <button onClick={() => viewCvBtn(d.image, d.name, d.description)} type="button" className="view-template">
+                                        View Template
+                                    </button>
+                                </div>
+                                <h4 className="cvTitle">{d.name}</h4>
+                                <p className="cvText">{d.description}</p>
+                            </Col>
+                        );
                     })}
-
                 </Row>
             </div>
 

@@ -17,8 +17,9 @@
   margin-left: -12px;
   /* left: 0%; */
 }
+
 .jobSearchHeadings{
-  position: absolute;
+  position:absolute;
   top: 10%;
   width: 100%;
   text-align: center;
@@ -41,7 +42,20 @@
 
 
 }
+.ant-btn-primary {
+ 
+  background: #0A2C66;
+  border-color: #0A2C66;
+  border-radius: 5px 0px 5px 0px;
 
+}
+#searchBtn{
+  border-color: #0A2C66;
+  margin-left: 10px;
+}
+.anticon{
+       vertical-align: 0em!important;
+}
 #arrows {
   background-color: white;
   /* border: thin solid grey; */
